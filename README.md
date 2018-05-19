@@ -25,9 +25,10 @@
 
 
 2. Run train.py to train models
-      - Trained models and Loss_log will be saved at "DR_GAN/snapshot/Single" by default
-      - You can also use tensorboard to watch the loss graphs in real-time.
+      - Trained models and Loss_log will be saved at "checkpoints" by default. Generated
+      pictures will be saved at "result".
       > python train.py
+      - You can also use tensorboard to watch the loss graphs in real-time.      
       > tensorboard --logdir=/home/zhangjunhao/logs
 
 3. Generate Image with arbitrary pose
@@ -45,9 +46,10 @@
 
 
 2. Run train.py to train models
-      - Trained models and Loss_log will be saved at "DR_GAN/snapshot/Single" by default
-      - You can also use tensorboard to watch the loss graphs in real-time.
+      - Trained models and Loss_log will be saved at "checkpoints" by default. Generated
+      pictures will be saved at "result".
       > python train.py
+      - You can also use tensorboard to watch the loss graphs in real-time.      
       > tensorboard --logdir=/home/zhangjunhao/logs
 
 3. Generate Image with arbitrary pose
