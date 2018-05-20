@@ -16,7 +16,7 @@ class BaseOptions(object):
 
     def initialize(self):
 
-        self.parser.add_argument('--dataroot', default='/home/zhangjunhao/data/', help='path to images (should have subfolder train and test)')
+        self.parser.add_argument('--dataroot', default='/home/zhangjunhao/cfp-dataset/Data/Images', help='path to images (should have subfolder train and test)')
         self.parser.add_argument('--input_nc', type=int, default=3, help='# of input image channels')
         self.parser.add_argument('--output_nc', type=int, default=3, help='# of output image channels')
 
