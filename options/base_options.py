@@ -16,7 +16,7 @@ class BaseOptions(object):
 
     def initialize(self):
 
-        self.parser.add_argument('--dataroot', default='/home/zhangjunhao/cfp-dataset/Data/Images', help='path to images (should have subfolder train and test)')
+        self.parser.add_argument('--dataroot', default='cfp-dataset/Data/Images', help='path to images (should have subfolder train and test)')
         self.parser.add_argument('--input_nc', type=int, default=3, help='# of input image channels')
         self.parser.add_argument('--output_nc', type=int, default=3, help='# of output image channels')
 
@@ -30,7 +30,7 @@ class BaseOptions(object):
         self.parser.add_argument('--N_d', type=int, default=450, help='the sum of the identities')
         self.parser.add_argument('--N_z', type=int, default=50, help='the sum of the noise')
 
-        self.parser.add_argument('--gpu_ids', type=str, default='1', help='gpu ids: e.g. 0  0,1,2, 0,2. use -1 for CPU')
+        self.parser.add_argument('--gpu_ids', type=str, default='0', help='gpu ids: e.g. 0  0,1,2, 0,2. use -1 for CPU')
 
         self.initialized = True
 
