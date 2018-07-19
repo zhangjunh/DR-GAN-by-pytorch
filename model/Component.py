@@ -40,14 +40,14 @@ def one_hot(label, depth):
 
 def weights_init_normal(m):
     if isinstance(m, nn.ConvTranspose2d):
-        init.uniform(m.weight.data, 0.0, 0.02)
+        init.uniform_(m.weight.data, 0.0, 0.02)
     elif isinstance(m, nn.Conv2d):
-        init.uniform(m.weight.data, 0.0, 0.02)
+        init.uniform_(m.weight.data, 0.0, 0.02)
     elif isinstance(m, nn.Linear):
-        init.uniform(m.weight.data, 0.0, 0.02)
+        init.uniform_(m.weight.data, 0.0, 0.02)
     elif isinstance(m, nn.BatchNorm2d):
-        init.uniform(m.weight.data, 1.0, 0.02)
-        init.constant(m.bias.data, 0.0)
+        init.uniform_(m.weight.data, 1.0, 0.02)
+        init.constant_(m.bias.data, 0.0)
 
 
 class conv_unit(nn.Module):
