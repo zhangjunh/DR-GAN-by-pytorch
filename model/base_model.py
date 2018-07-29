@@ -17,11 +17,11 @@ class BaseModel(object):
 		save_path = os.path.join(self.save_dir, save_filename)
 		torch.save(network.cpu().state_dict(), save_path)
 		if len(gpu_ids) and torch.cuda.is_available():
-			network.cuda(device_id=gpu_ids[0])
+			network.cuda(device=gpu_ids[0])
 
 	def load(self, network, filename):
 		# save_path = os.path.join(self.save_dir, filename)
-		save_path = os.path.join('/home/zhangjunhao/checkpoints', filename)
+		save_path = os.path.join('checkpoints', filename)
 		network.load_state_dict(torch.load(save_path))
 
 
