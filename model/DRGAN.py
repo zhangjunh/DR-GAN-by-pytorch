@@ -29,7 +29,7 @@ class Single_DRGAN(BaseModel):
         BaseModel.initialize(self, opt)
         self.is_Train = opt.is_Train
 
-        self.G = Generator(N_p=opt.N_p, N_z=opt.N_z)
+        self.G = Generator(N_p=opt.N_p, N_z=opt.N_z, single=True)
         self.D = Discriminator(N_p=opt.N_p, N_d=opt.N_d)
         if self.is_Train:
             self.optimizer_G = optim.Adam(self.G.parameters(), lr=opt.lr_G, betas=(opt.beta1, opt.beta2))
@@ -51,15 +51,11 @@ class Single_DRGAN(BaseModel):
         self.pose = []
         self.identity = []
         self.name = []
-        for i in range(len(input)):
-            self.image.append(input[i]['image'])
-            self.pose.append(input[i]['pose'])
-            self.identity.append(input[i]['identity'])
-            self.name.append(input[i]['name'])
-        self.image = [item for sublist in self.image for item in sublist]
-        self.pose = [item for sublist in self.pose for item in sublist]
-        self.identity = [item for sublist in self.identity for item in sublist]
-        self.name = [item for sublist in self.name for item in sublist]
+        for i in range(len(input['pose'])):
+            self.image.append(input['image'][i])
+            self.pose.append(input['pose'][i])
+            self.identity.append(input['identity'][i])
+            self.name.append(input['name'][i])
 
     def set_input(self, input):
         """
