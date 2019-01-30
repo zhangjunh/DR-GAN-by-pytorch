@@ -14,6 +14,7 @@
 - scipy
 - matplotlib
 - pillow
+- tensorboardX
 
 ## How to use
 
@@ -28,8 +29,8 @@
       - Trained models and Loss_log will be saved at "checkpoints" by default. Generated
       pictures will be saved at "result".
       > python train.py
-      - You can also use tensorboard to watch the loss graphs in real-time.      
-      > tensorboard --logdir=/home/zhangjunhao/logs
+      - You can also use tensorboard to watch the loss graphs in real-time. (Install tensorboard before doing it.)
+      > tensorboard --logdir=/home/zhangjunhao/logs (Or the address of dir 'logs' in your folder.）
 
 3. Generate Image with arbitrary pose
       - Change the "save_path" in base_model.py.
@@ -49,8 +50,8 @@
       - Trained models and Loss_log will be saved at "checkpoints" by default. Generated
       pictures will be saved at "result".
       > python train.py
-      - You can also use tensorboard to watch the loss graphs in real-time.      
-      > tensorboard --logdir=/home/zhangjunhao/logs
+      - You can also use tensorboard to watch the loss graphs in real-time. (Install tensorboard before doing it.)   
+      > tensorboard --logdir=/home/zhangjunhao/logs (Or the address of dir 'logs' in your folder.）
 
 3. Generate Image with arbitrary pose
       - Change the "save_path" in base_model.py.
