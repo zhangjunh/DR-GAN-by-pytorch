@@ -8,7 +8,7 @@
 
 ## Requirements
 - python 3.x
-- pytorch
+- pytorch 0.2
 - torchvision
 - numpy
 - scipy
